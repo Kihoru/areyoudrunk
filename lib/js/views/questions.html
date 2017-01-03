@@ -8,12 +8,12 @@
 </div>
 
 <div class="container" ng-show="testBegin">
-	<h5>Question {{currentIndex}}</h5>
+	<h5>Question n°{{currentIndex}}</h5>
 
 	<p>{{questions.current_question.question}}</p>
 	<form>
 		<ul>
-			<li ng-repeat="answer in questions.current_question.answers|orderBy:questions.random">
+			<li ng-repeat="answer in questions.current_question.answers">
 				<input type="radio"  id="choice{{$index}}" ng-model="questions.choice" name="questions.choice" value="{{answer}}">
 				<label for="choice{{$index}}"></label>
 				{{answer}}
