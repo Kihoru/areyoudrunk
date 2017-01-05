@@ -1,20 +1,19 @@
 <div class="progressBar">
 </div>
 
-<p>Score : {{currentScore}}</p>
+<p>Score : {{score}}</p>
 
-<div class="container" ng-hide="testBegin">
-	<button ng-click="testBegin = true; addQuestion()">Commencer le test</button>	
+<div class="container" ng-hide="begin">
+	<button ng-click="begin = true; chrono();">Commencer le test</button>	
 </div>
-
-<div class="container" ng-show="testBegin">
-	<h5>Question n°{{currentIndex}}</h5>
-
-	<p>{{questions.current_question.question}}</p>
+<div class="container" ng-show="begin">
+	<h5>Question n°{{index + 1}}</h5>
+	<div id="timer"><span style="width:{{timer+'%'}}"></span></div>
+	<p>{{current.question}}</p>
 	<form>
 		<ul>
-			<li ng-repeat="answer in questions.current_question.answers">
-				<input type="radio"  id="choice{{$index}}" ng-model="questions.choice" name="questions.choice" value="{{answer}}">
+			<li ng-repeat="answer in current.answers">
+				<input type="radio"  id="choice{{$index}}" ng-model="res" name="choice" value="{{answer}}">
 				<label for="choice{{$index}}"></label>
 				{{answer}}
 			</li>
