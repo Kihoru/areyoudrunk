@@ -1,20 +1,16 @@
 <div class="row">
-	
-	<h3 class="center-align green-text lighten-1">Es-tu en état de conduire ?</h5>
-	
-	<p>Tu sors d'une soirée un peu arrosée et c'est le moment de prendre la voiture. Mais tu n'est pas sûr de savoir si tu es en état de conduire ?</p>
-
-	<p>Ne tinquiète pas ! Cette application va t'aidez à déterminer si tu as les idées claires et un cerveau suffisamment réactif, en te proposant de répondre à une série de questions.</p>
-
-	<p>En résumé : <span>tu réponds aux questions et on te dit si t'es bourré</span></p>
-
-	<p>Attention ! Cette application web s'inscrit dans un cadre de pur divertissement, et ne constitue en aucun cas une autorisation officielle de prendre la route, et ce quelque-soit le résultat.</p>
-	<p>Le conducteur reste le seul responsable en cas d'accident lié à la consommation abusive d'alcool.</p>
-
-	<label>
+	<div class="col s12">
+		<h3 class="left-align green-text lighten-1">Es-tu en état de conduire ?</h5>
+	</div>
+	<div class="col s12 m7">
+		<p class="flow-text">Tu sors d'une soirée un peu arrosée et c'est le moment de prendre la voiture. Mais tu n'est pas sûr de savoir si tu es en état de conduire ? Ne t'inquiètes pas ! Cette application va t'aider à déterminer si tu as les idées claires et un cerveau suffisamment réactif, en te proposant de répondre à une série de questions. En résumé : <span>tu réponds aux questions et on te dit si t'es bourré.</span> Attention ! Cette application web s'inscrit dans un cadre de pur divertissement, et ne constitue en aucun cas une autorisation officielle de prendre la route, et ce quelque-soit le résultat. Le conducteur reste le seul responsable en cas d'accident lié à la consommation abusive d'alcool.</p>
 		<input id="continue" type="checkbox" ng-model="accueil.continue"/>
-		<label for="continue"></label>
-		<p>J'ai bien compris que ce test n'est pas officiel et que je suis le seul garant de ma sécurité.</p>
-	</label>
-	<input ng-click="accueil.redirect()" type="button" value="OK ! C'est parti !" ng-disabled="!accueil.continue">
+		<label for="continue">J'ai bien compris que ce test n'est pas officiel et que je suis le seul garant de ma sécurité.</label>
+		<div class="section">
+			<button ng-click="accueil.redirect()" type="button" ng-disabled="!accueil.continue" class="btn waves-effect waves-light green lighten-1">OK ! C'est parti !</button>
+		</div>
+	</div>
+	<div class="col s12 offset-m1 m4">
+		<img class="responsive-img" src="/app/img/drunkat.jpg" alt="home illustration">
+	</div>
 </div>
