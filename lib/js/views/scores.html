@@ -1,1 +1,22 @@
-<h1>3</h1>
+<div ng-controller="ScoresCtrl">
+<h2>Tableau des scores</h2>
+
+<table>
+	<tr>
+		<td>Utilisateur</td>
+		<td>Score</td>
+		<td>Date</td>
+	</tr>
+	<tr ng-repeat="score in scores">
+		<td>{{score.user}}</td>
+		<td>{{score.result}}</td>
+		<!-- <td>{{score.date}}</td> -->
+	</tr>
+</table>
+
+<form ng-submit="score.addLine()">
+	<input ng-model="score.user" type="text">
+	<input ng-model="score.result" type="text">
+	<input type="submit">
+</form>
+</div>
