@@ -1,0 +1,108 @@
+[
+	{
+		"question": "Êtes-vous bourré ? (entourez votre réponse)",
+		"answers" : [
+			"Oui",
+			"Non",
+			"C'était quoi la question ?",
+			"On peut pas entourer..."
+		],
+		"goodAnswer": "On peut pas entourer..."
+	},
+	{
+		"question": "Quelle est le couleur d'un légume vert ?",
+		"answers" : [
+			"rouge",
+			"vert",
+			"bleu",
+			"jaune"
+		],
+		"goodAnswer": "vert"
+	},
+	{
+		"question": "On dit de l'eau sèche ou de l'eau sec ?",
+		"answers" : [
+			"Sèche !",
+			"Sec !",
+			"Aucunes des deux"
+		],
+		"goodAnswer": "Aucunes des deux"
+	},
+	{
+		"question": "Combien fait 10 x 0 ?",
+		"answers" : [
+			"10000000000",
+			"1,0000000000",
+			"La tête à toto",
+			"0"
+		],
+		"goodAnswer": "0"
+	},
+	{
+		"question": "De quel coté se lève le soleil ?",
+		"answers" : [
+			"A gauche",
+			"Je suis pas une boussole",
+			"De l'ouest",
+			"De l'est",
+			"L'autre coté de la où il se couche !"
+		],
+		"goodAnswer": "De l'est"
+	},
+	{
+		"question": "On peut passé à quel feu ?",
+		"answers" : [
+			"Rouge",
+			"Bleu",
+			"Arc en ciel",
+			"Vert",
+			"Quand on veut"
+		],
+		"goodAnswer": "Vert"
+	},
+	{
+		"question": "Quelle est la femelle du canard ?",
+		"answers" : [
+			"La canarde",
+			"La canette",
+			"La canapèche",
+			"La canne",
+			"La cane"
+		],
+		"goodAnswer": "1"
+	},
+	{
+		"question": "Quelle est la capitale des etats-unis ?",
+		"answers" : [
+			"New-York", 
+			"Paris", 
+			"Le bar", 
+			"Blagdad",
+			"Washington-DC",
+			"Je suis pas américain !"
+		],
+		"goodAnswer": "Washington-DC"
+	},
+	{
+		"question": "Si mon père est roux, combien ma voiture a t'elle de roues ?",
+		"answers" : [
+			"5",
+			"4",
+			"C'est nul.",
+			"6"
+		],
+		"goodAnswer": "4"
+	},
+	{
+		"question": "Le père de mon père est le cousin du frère de sa soeur, qui suis-je pour mon père ?",
+		"answers" : [
+			"Euh....", 
+			"Sa tante ?", 
+			"Son arrière-cousin", 
+			"Son oncle",
+			"Son fils",
+			"Son petit-fils"
+		],
+		"goodAnswer": "Son fils"
+	}
+]

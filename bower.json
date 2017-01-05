@@ -1,0 +1,25 @@
+{
+  "name": "areyoudrunk.dev",
+  "homepage": "https://github.com/Kihoru/areyoudrunk",
+  "authors": [
+    "Kihoru <thomas.graph.rigal@gmail.com>"
+  ],
+  "description": "are you drunk ?",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.1",
+    "angular": "1.5.9",
+    "materialize": "^0.97.8",
+    "ngstorage": "^0.3.11"
+  }
+}

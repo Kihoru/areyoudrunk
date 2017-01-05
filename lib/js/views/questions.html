@@ -2,24 +2,27 @@
 </div>
 
 <p>Score : {{score}}</p>
+<div ng-hide="showScore">
+	<div class="container" ng-hide="begin">
+		<button ng-click="begin = true; chrono();">Commencer le test</button>	
+	</div>
+	<div class="container" ng-show="begin">
+		<h5>Question n°{{index}}</h5>
+		<div id="timer"><span style="width:{{timer+'%'}}"></span></div>
+		<p>{{current.question}}</p>
+		<form>
+			<ul>
+				<li ng-repeat="answer in current.answers">
+					<input type="radio"  id="choice{{$index}}" ng-model="questions.res" name="choice" value="{{answer}}">
+					<label for="choice{{$index}}"></label>
+					{{answer}}
+				</li>
+			</ul>
+			<button ng-click="send();">Question suivante</button>
+		</form>
+	</div>	
+</div>
 
-<div class="container" ng-hide="begin">
-	<button ng-click="begin = true; chrono();">Commencer le test</button>	
-</div>
-<div class="container" ng-show="begin">
-	<h5>Question n°{{index + 1}}</h5>
-	<div id="timer"><span style="width:{{timer+'%'}}"></span></div>
-	<p>{{current.question}}</p>
-	<form>
-		<ul>
-			<li ng-repeat="answer in current.answers">
-				<input type="radio"  id="choice{{$index}}" ng-model="res" name="choice" value="{{answer}}">
-				<label for="choice{{$index}}"></label>
-				{{answer}}
-			</li>
-		</ul>
-	</form>
-</div>
 
 
 
