@@ -4,22 +4,22 @@ app.config(function($routeProvider, $locationProvider) {
 
 	$routeProvider
 		.when('/', {
-			templateUrl  : 'lib/js/views/accueil.html',
+			templateUrl  : 'app/views/accueil.html',
 			controller   : 'AccueilCtrl',
 			controllerAs : 'accueil'
 		})
 		.when('/scores', {
-			templateUrl  : 'lib/js/views/scores.html',
+			templateUrl  : 'app/views/scores.html',
 			controller   : 'ScoresCtrl',
 			controllerAs : 'score'
 		})
 		.when('/myscore', {
-			templateUrl  : 'lib/js/views/myscore.html',
+			templateUrl  : 'app/views/myscore.html',
 			controller   : 'MyscoreCtrl',
 			controllerAs : 'myscore'
 		})
 		.when('/questions', {
-			templateUrl  : 'lib/js/views/questions.html',
+			templateUrl  : 'app/views/questions.html',
 			controller   : 'QuestionsCtrl',
 			controllerAs : 'questions'
 		})

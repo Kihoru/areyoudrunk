@@ -4,35 +4,57 @@
 	<meta charset="UTF-8">
 	<title>Are you drunk ?</title>
 	<link rel="stylesheet" href="lib/bower_components/materialize/dist/css/materialize.min.css">
-	<link rel="stylesheet" href="lib/style/app.css">
+	<link rel="stylesheet" href="lib/style/app.css">	
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<base href="/">
 </head>
 <body ng-app="UndrunkApp">
-
-	<div>
-		<h3>Angular Drunk Test</h3>
-	</div>
+	<nav class="green lighten-1">
+	    <div class="nav-wrapper container">
+			<a href="#" class="brand-logo">AreYouDrunk</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="/">Accueil</a></li>
+				<li><a href="/scores">Tableau des scores</a></li>
+			</ul>
+	    </div>
+	</nav>
 	
 	<div class="container" ng-view></div>
 	
-
+	<footer class="page-footer green lighten-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Are you drunk ?</h5>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">What's it ?</h5>
+                <p class="grey-text text-lighten-4">Can you drive or not ? Test it here !</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright to Kihoru & efseb
+            <a class="grey-text text-lighten-4 right" href="https://github.com/Kihoru/areyoudrunk">Github/areyoudrunk</a>
+            </div>
+          </div>
+        </footer>
 	<!-- APP UTILS -->
 	<script src="lib/bower_components/angular/angular.min.js"></script>
 	<script src="lib/bower_components/angular-route/angular-route.min.js"></script>
 	<script src="lib/bower_components/ngstorage/ngStorage.min.js"></script>
 	<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="lib/bower_components/materialize/dist/js/materialize.min.js"></script>
-	<!-- APP ENGINE -->
-	<script src="lib/js/app.js"></script>
-	<script src="lib/js/routing.js"></script>
-	<!-- APP CONTROLLERS -->
-	<script src="lib/js/controllers/AccueilController.js"></script>
-	<script src="lib/js/controllers/QuestionsController.js"></script>
-	<script src="lib/js/controllers/MyscoreController.js"></script>
-	<script src="lib/js/controllers/ScoreController.js"></script>
-	<!-- APP FIREBASE -->
 	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-	<!-- APP AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+	<!-- APP ENGINE -->
+	<script src="app/js/app.js"></script>
+	<script src="app/js/routing.js"></script>
+	<!-- APP CONTROLLERS -->
+	<script src="app/js/controllers/AccueilController.js"></script>
+	<script src="app/js/controllers/QuestionsController.js"></script>
+	<script src="app/js/controllers/MyscoreController.js"></script>
+	<script src="app/js/controllers/ScoreController.js"></script>
 </body>
 </html>

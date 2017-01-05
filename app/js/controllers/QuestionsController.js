@@ -6,7 +6,7 @@ app.controller('QuestionsCtrl', function($interval, $scope, $http, $location, $s
 	$scope.storage = $sessionStorage;
 
 	$scope.list = [];
-	$http.get('/lib/js/questions.json')
+	$http.get('/app/js/questions.json')
 		.then(function(res){
 			$scope.list = res.data;
 			++$scope.index;
