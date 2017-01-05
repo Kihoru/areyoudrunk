@@ -2,7 +2,7 @@
   "name": "areyoudrunk.dev",
   "homepage": "https://github.com/Kihoru/areyoudrunk",
   "authors": [
-    "Kihoru <thomas.graph.rigal@gmail.com>"
+    "Kihoru <thomas.graph.rigal@gmail.com>, efseb <seb.efther@gmail.com>"
   ],
   "description": "are you drunk ?",
   "main": "index.html",
