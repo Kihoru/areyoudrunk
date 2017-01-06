@@ -41,7 +41,7 @@ function MyscoreCtrl(tblScores, $interval, $scope, $http, $location, $sessionSto
 
 	// Fonction d'ajout des valeurs dans la database de firebase
 	$scope.scoreAddLine = function(){
-		if(!score.scoreUser){ return; }
+		if(!$scope.scoreUser){ return; }
 		$scope.scores.$add({
 			from: $scope.scoreUser,
 			content: $scope.storage.score

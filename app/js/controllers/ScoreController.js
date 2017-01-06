@@ -4,7 +4,6 @@ ScoresCtrl.$inject = ['tblScores'];
 
 app.controller('ScoresCtrl', ScoresCtrl);
 
-
 function ScoresCtrl(tblScores) {
 	let score = this;
 
