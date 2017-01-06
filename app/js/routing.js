@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; 
 
 app.config(function($routeProvider, $locationProvider) {
 
@@ -16,12 +16,26 @@ app.config(function($routeProvider, $locationProvider) {
 		.when('/myscore', {
 			templateUrl  : 'app/views/myscore.html',
 			controller   : 'MyscoreCtrl',
-			controllerAs : 'myscore'
+			controllerAs : 'myscore',
+			resolve: {
+				"check" : function($sessionStorage, $location){
+							if($sessionStorage.gamePlayed==false){
+								$location.path('/');
+							}
+						}
+			}
 		})
 		.when('/questions', {
 			templateUrl  : 'app/views/questions.html',
 			controller   : 'QuestionsCtrl',
-			controllerAs : 'questions'
+			controllerAs : 'questions',
+			resolve: {
+				"check" : function($sessionStorage, $location){
+							if($sessionStorage.canPlay==false){
+								$location.path('/');
+							}
+						}
+			}
 		})
 		.otherwise({
 			redirectTo	 : '/'

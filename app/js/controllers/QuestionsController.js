@@ -89,6 +89,7 @@ function QuestionsCtrl($interval, $scope, $http, $location, $sessionStorage) {
 		// Avec les données stockées dans le session storage.
 		if ($scope.maxQuestion === $scope.index) {
 			$interval.cancel($scope.interval);
+			$scope.storage.gamePlayed = true;
 			$scope.storage.score = $scope.score;
 			$location.path('/myscore');
 		}else{

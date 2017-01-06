@@ -29,7 +29,7 @@ function MyscoreCtrl(tblScores, $interval, $scope, $http, $location, $sessionSto
 			$scope.color = "green";
 			$scope.imgChange = "notdrunk2.jpg";
 		}
-		else if ($scope.storage.score < 0 && -3 > $scope.storage.score) {
+		else if ($scope.storage.score < 0 && $scope.storage.score > -3) {
 			$scope.message = "Avec des réponses pareilles, mieux vaut être prudent. Attendez un peu avant de reprendre la route.";
 			$scope.valide = "KO";
 			$scope.color = "red";

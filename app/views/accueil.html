@@ -7,7 +7,7 @@
 		<input id="continue" type="checkbox" ng-model="accueil.continue"/>
 		<label for="continue">J'ai bien compris que ce test n'est pas officiel et que je suis le seul garant de ma sécurité.</label>
 		<div class="section">
-			<button ng-click="accueil.redirect()" type="button" ng-disabled="!accueil.continue" class="btn waves-effect waves-light green lighten-1">OK ! C'est parti !</button>
+			<button ng-click="accueil.redirect(); storage.canPlay=true;" type="button" ng-disabled="!accueil.continue" class="btn waves-effect waves-light green lighten-1">OK ! C'est parti !</button>
 		</div>
 	</div>
 	<div class="col s12 offset-m1 m4">
