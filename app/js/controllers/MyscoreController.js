@@ -19,12 +19,12 @@ function MyscoreCtrl(tblScores, $interval, $scope, $http, $location, $sessionSto
 		if($scope.storage.score > 4) {
 			$scope.message = "Même Chuck Norris n'a jamais été aussi sobre que vous ! Bonne route";
 			$scope.valide = "OK";
-			$scope.imgChange = "";
+			$scope.imgChange = "notdrunk.jpg";
 		}
 		else if ($scope.storage.score >= 0 && 5 > $scope.storage.score) {
 			$scope.message = "Vous semblez un peu stressé. Détendez-vous, tout va bien ! Vous pouvez-y allez, et surtout roulez tranquillement !";
 			$scope.valide = "OK";
-			$scope.imgChange = "";
+			$scope.imgChange = "notdrunk2.jpg";
 		}
 		else if ($scope.storage.score < 0 && -3 > $scope.storage.score) {
 			$scope.message = "Avec des réponses pareilles, mieux vaut être prudent. Attendez un peu avant de reprendre la route.";
