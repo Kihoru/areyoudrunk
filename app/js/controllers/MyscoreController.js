@@ -1,14 +1,18 @@
 'use strict';
 
-app.controller('MyscoreCtrl', function($interval, $scope, $http, $location, $sessionStorage){
-	$scope.storage = $sessionStorage;
-	console.log($scope.storage.score);
-	
-	// score   input nom,  firebase.
-	//calcul -> tu peut prendre la voiture ou pas.
+app.factory('tblScores', ['$firebaseArray', function($firebaseArray) {
+	let ref = new Firebase("https://areyoudrunk-936e6.firebaseio.com/");
 
+	return $firebaseArray(ref);
+}]);
+
+app.controller('MyscoreCtrl', ['tblScores', function(tblScores, $interval, $scope, $http, $location, $sessionStorage){
+
+	$scope.storage = $sessionStorage;
+	$scope.scoreUser = "";
 	$scope.message = "";
-	$scope.answer();
+	$scope.scores = tblScores;
+
 	$scope.answer = function(){
 		
 		if($scope.storage.score > 4) {
@@ -24,4 +28,15 @@ app.controller('MyscoreCtrl', function($interval, $scope, $http, $location, $ses
 			$scope.message = "Bon, il est définitivement temps d'aller cuver votre alcool !!! Jetez immédiatement ces clés de voiture !";
 		}
 	}
-});
+	$scope.answer();
+
+	// Ajout des valeurs dans la database de firebase
+	$scope.scoreAddLine = function(){
+		/*if(!score.newScoreUser && !score.newScoreResult){ return; }*/
+		$scope.scores.$add({
+			from: $scope.scoreUser,
+			content: $scope.storage.score
+		});
+	};
+}]);
+	
