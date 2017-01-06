@@ -20,7 +20,7 @@
 			<ul>
 				<li ng-repeat="answer in current.answers">
 					<input type="radio"  id="choice{{$index}}" ng-model="questions.res" name="choice" value="{{answer}}">
-					<label for="choice{{$index}}"></label>
+					<label for="choice{{$index}}" style="vertical-align: bottom;"></label>
 					{{answer}}
 				</li>
 			</ul>
