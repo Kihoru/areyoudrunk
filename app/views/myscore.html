@@ -1,0 +1,14 @@
+<h2>Le verdict de Sam</h2>
+
+<div class="content">
+	<p class="img"><img ng-src="../img/{{imgChange}}"></p>
+	<p class="valide">{{valide}}</p>
+	<p class="score">Score : {{storage.score}}</p>
+	<p class="center">{{message}}</p>
+</div>
+
+
+<form ng-submit="scoreAddLine()">
+	<input ng-model="scoreUser" type="text" />
+	<input type="submit" value="Valider" />
+</form>
