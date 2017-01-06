@@ -12,6 +12,7 @@ function MyscoreCtrl(tblScores, $interval, $scope, $http, $location, $sessionSto
 	$scope.message 		= "";
 	$scope.valide		= "";
 	$scope.imgChange 	= "";
+	$scope.color 		= ""; 
 
 	// Fonction d'affichage de message &image en fonction du score
 	$scope.answer = function(){
@@ -19,21 +20,25 @@ function MyscoreCtrl(tblScores, $interval, $scope, $http, $location, $sessionSto
 		if($scope.storage.score > 4) {
 			$scope.message = "Même Chuck Norris n'a jamais été aussi sobre que vous ! Bonne route";
 			$scope.valide = "OK";
+			$scope.color = "green";
 			$scope.imgChange = "notdrunk.jpg";
 		}
 		else if ($scope.storage.score >= 0 && 5 > $scope.storage.score) {
 			$scope.message = "Vous semblez un peu stressé. Détendez-vous, tout va bien ! Vous pouvez-y allez, et surtout roulez tranquillement !";
 			$scope.valide = "OK";
+			$scope.color = "green";
 			$scope.imgChange = "notdrunk2.jpg";
 		}
 		else if ($scope.storage.score < 0 && -3 > $scope.storage.score) {
 			$scope.message = "Avec des réponses pareilles, mieux vaut être prudent. Attendez un peu avant de reprendre la route.";
-			$scope.valide = "kO";
+			$scope.valide = "KO";
+			$scope.color = "red";
 			$scope.imgChange = "drunk.png";
 		}
 		else if ($scope.storage.score < -2) {
 			$scope.message = "Bon, il est définitivement temps d'aller cuver votre alcool !!! Jetez immédiatement ces clés de voiture !";
-			$scope.valide = "kO";
+			$scope.valide = "KO";
+			$scope.color = "red";
 			$scope.imgChange = "drunkat.jpg";
 		}
 	}
@@ -46,5 +51,6 @@ function MyscoreCtrl(tblScores, $interval, $scope, $http, $location, $sessionSto
 			from: $scope.scoreUser,
 			content: $scope.storage.score
 		});
+		$location.path('/scores');
 	};
 }
