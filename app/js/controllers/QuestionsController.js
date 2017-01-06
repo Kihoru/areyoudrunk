@@ -22,6 +22,8 @@ function QuestionsCtrl($interval, $scope, $http, $location, $sessionStorage) {
 	$scope.begin = false;
 	$scope.res = '';
 	$scope.showScore = false;
+	$scope.screenTimer = 7;
+	$scope.Math = Math;
 
 	//Récupération des questions dans le fichier Json
 	$http.get('/app/js/questions.json')
@@ -54,12 +56,13 @@ function QuestionsCtrl($interval, $scope, $http, $location, $sessionStorage) {
 		//On met le timer a 100 et l'interval se lance.
 		if($scope.begin===true) {
 			$scope.timer = 100;
+			$scope.screenTimer = 7;
 		}
 
 		$scope.interval = $interval(function() {
 
 			$scope.timer -= 100 / (7000/ (1000/60) );
-
+			$scope.screenTimer -= 1 / 60;
 			//Au bout de 7s On lance la fonction send
 			if ($scope.timer <= 0) {
 				$scope.send();
@@ -97,6 +100,7 @@ function QuestionsCtrl($interval, $scope, $http, $location, $sessionStorage) {
 			// Sinon on lance la prochaine question, et on remet le timer à 0;
 			// Et on incrémente l'index
 			$scope.timer = 100;
+			$scope.screenTimer = 7;
 
 			++$scope.index;
 

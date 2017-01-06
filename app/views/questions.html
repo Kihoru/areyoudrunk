@@ -11,7 +11,10 @@
 	</div>
 	<div class="col s12" ng-show="begin">
 		<h5 class="green-text lighten-1 left-align">Question n°<span class="green-text" style="font-weight:500;">{{index}}</span></h5>
-		<div id="timer"><span style="width:{{timer+'%'}}"></span></div>
+		<div id="timer">
+			<span style="width:{{timer+'%'}}"></span>
+		</div>
+		<p class="flow-text green-text lighten-1 timerCount">{{Math.ceil(screenTimer)}}s</p>
 		<p class="flow-text green-text lighten-1">{{current.question}}</p>
 		<form>
 			<ul>
