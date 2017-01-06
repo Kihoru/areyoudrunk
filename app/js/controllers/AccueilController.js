@@ -1,6 +1,11 @@
 'use strict';
 
-app.controller('AccueilCtrl',['$location', function($location) {
+AccueilCtrl.$inject = ['$location'];
+
+app.controller('AccueilCtrl', AccueilCtrl); 
+
+function AccueilCtrl($location) {
+	
 	let accueil = this;
 
 	accueil.continue = false;
@@ -9,5 +14,4 @@ app.controller('AccueilCtrl',['$location', function($location) {
 	{
 		$location.path('/questions');
 	}
-
-}]);
+}

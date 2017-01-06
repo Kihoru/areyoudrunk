@@ -1,12 +1,7 @@
 'use strict';
 
-app.factory('tblScores', ['$firebaseArray', function($firebaseArray) {
-	let ref = new Firebase("https://areyoudrunk-936e6.firebaseio.com/");
-
-	return $firebaseArray(ref);
-}]);
-
-app.controller('MyscoreCtrl', ['tblScores', function(tblScores, $interval, $scope, $http, $location, $sessionStorage){
+app.controller('MyscoreCtrl', ['tblScores', '$interval', '$scope', '$http', '$location', '$sessionStorage', 'tblScores',
+	function($interval, $scope, $http, $location, $sessionStorage, tblScores){
 
 	$scope.storage = $sessionStorage;
 	$scope.scoreUser = "";
@@ -38,5 +33,6 @@ app.controller('MyscoreCtrl', ['tblScores', function(tblScores, $interval, $scop
 			content: $scope.storage.score
 		});
 	};
-}]);
+	}
+]);
 	

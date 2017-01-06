@@ -1,6 +1,11 @@
 'use strict';
 
-app.controller('ScoresCtrl', ['tblScores', function(tblScores) {
+ScoresCtrl.$inject = ['tblScores'];
+
+app.controller('ScoresCtrl', ScoresCtrl);
+
+
+function ScoresCtrl(tblScores) {
 	let score = this;
 
 	score.scores = tblScores; 
@@ -17,4 +22,4 @@ app.controller('ScoresCtrl', ['tblScores', function(tblScores) {
 		}
 		return compteur;
 	};
-}]);
+}
